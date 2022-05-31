@@ -1,0 +1,42 @@
+Nouns for Classes:
+
+-Player (1/2/et cetera: Player will class will hold questions and answers and saved score value. 
+Table columns:
+  -id
+  -Name
+  -Score
+)
+-Questions:
+  -id
+  -Integers from method
+  -Answers
+-Game
+  -id
+  -which player is answering
+  -Victory board
+  -Call game end qualifier
+-Turn
+  -id
+  -Execute end.game
+
+METHODS: 
+
+-Turn 
+  -Wrap up what happens in a given block, turn will recieve questions and answers from Players and send score updated to players. Contains game loop.
+-Question
+  -Random number generator (1-20) * 2
+  -Answer(table column)
+-current_player (who is asking)
+-Score
+  -Comparing answers1(implied) to answers2(given)
+  -Subtracting from lives (down from 3)
+  -Returning lives
+-Game Over 
+  -A tallying step, no more turns. Game Over will compare scores from players. It will run every turn but only execute if it's truthy. Manages current_player to evaluate score before moving on. If truthy game over will end the game.
+
+Initial Values:
+  -Scores = 3
+  -Question integers = null
+  -Which player is active = Player1
+
+Model View Controller.
