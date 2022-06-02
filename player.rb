@@ -3,7 +3,15 @@ class Player
 
   def initialize(name)
     @name = name
-    self.lives = 3
+    @lives = 3
+    @lost = false
   end
-  
+
+  def lost
+    @lives == 0
+  end
+
+  def lose_life
+    @lives -= 1
+  end
 end
